@@ -10,10 +10,10 @@ class DatabaseHelper {
 
   //singleton class, it means it can only be initiated once.
   DatabaseHelper._();
-  static final instance = DatabaseHelper._();
+  static final DatabaseHelper instance = DatabaseHelper._();
 
-  Database _database;
   Future<Database> get database async {
+    Database _database = await _initDatabase();
     if (_database != null) return _database;
     _database = await _initDatabase();
     return _database;
@@ -64,6 +64,6 @@ class DatabaseHelper {
     List<Map> contacts = await db.query(Contact.tblContact);
     return contacts.length == 0
         ? []
-        : contacts.map((e) => Contact.fromMap(e)).toList();
+        : contacts.map((xvar) => Contact.fromMap(xvar)).toList();
   }
 }
