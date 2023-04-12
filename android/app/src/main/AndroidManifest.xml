@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.inspirar_project">
+    package="com.example.arbol">
    <application
-        android:label="inspirar_project"
+        android:label="arbol"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

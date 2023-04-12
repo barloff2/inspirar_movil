@@ -1,4 +1,4 @@
-package com.example.inspirar_project
+package com.example.arbol
 
 import io.flutter.embedding.android.FlutterActivity
 

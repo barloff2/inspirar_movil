@@ -1,6 +1,6 @@
 {
-    "name": "inspirar_project",
-    "short_name": "inspirar_project",
+    "name": "arbol",
+    "short_name": "arbol",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
