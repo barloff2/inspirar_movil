@@ -30,11 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _count = 0;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _count++;
     });
   }
 
@@ -54,22 +54,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.red[500],
+                  IconButton(
+                    iconSize: 50,
+                    color: Colors.blue,
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('First Icon was pressed')));
+                    },
+                    icon: Icon(
+                      Icons.ads_click,
+                    ),
                   ),
                   Container(
                     child: Text('1st', textAlign: TextAlign.center),
-                  ),
+                  ), //No es necesario el
                 ],
               )),
               Expanded(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.red[500],
+                  IconButton(
+                    iconSize: 50,
+                    color: Colors.blue,
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Second Icon was pressed')));
+                    },
+                    icon: Icon(
+                      Icons.add_a_photo,
+                    ),
                   ),
                   Container(
                     child: Text('2nd', textAlign: TextAlign.center),
@@ -80,9 +94,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.red[500],
+                  IconButton(
+                    iconSize: 50,
+                    color: Colors.blue,
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Third Icon was pressed')));
+                    },
+                    icon: Icon(
+                      Icons.ad_units,
+                    ),
                   ),
                   Container(
                     child: Text('3rd', textAlign: TextAlign.center),
