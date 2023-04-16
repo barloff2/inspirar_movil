@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,49 +44,53 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(
-        padding: EdgeInsets.all(150),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Icon(Icons.access_time),
-                  Text(
-                    'Texto 1',
-                  )
+      body: Center(
+        child: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Container(
+                    child: Text('1st', textAlign: TextAlign.center),
+                  ),
                 ],
-              ),
-            ),
-            Container(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Icons.access_time),
-                  Text(
-                    'Texto 2',
-                  )
+              )),
+              Expanded(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Container(
+                    child: Text('2nd', textAlign: TextAlign.center),
+                  ),
                 ],
-              ),
-            ),
-            Container(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Icons.access_time),
-                  Text(
-                    'Texto 3',
-                  )
+              )),
+              Expanded(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Container(
+                    child: Text('3rd', textAlign: TextAlign.center),
+                  ),
                 ],
-              ),
-            ),
-          ],
+              )),
+            ],
+          ),
         ),
       ),
     );
