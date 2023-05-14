@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Pacifico'),
       home: const MyHomePage(title: 'Inspirar'),
     );
   }
@@ -44,278 +42,107 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
+      body: GridView.count(mainAxisSpacing: 20.0, crossAxisCount: 3, children: [
+        Container(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('First Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ads_click,
-                        ),
-                      ),
-                      Container(
-                        child: Text('1st', textAlign: TextAlign.center),
-                      ), //No es necesario el
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Second Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.add_a_photo,
-                        ),
-                      ),
-                      Container(
-                        child: Text('2nd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Third Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ad_units,
-                        ),
-                      ),
-                      Container(
-                        child: Text('3rd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('First Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ads_click,
-                        ),
-                      ),
-                      Container(
-                        child: Text('1st', textAlign: TextAlign.center),
-                      ), //No es necesario el
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Second Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.add_a_photo,
-                        ),
-                      ),
-                      Container(
-                        child: Text('2nd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Third Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ad_units,
-                        ),
-                      ),
-                      Container(
-                        child: Text('3rd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('First Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ads_click,
-                        ),
-                      ),
-                      Container(
-                        child: Text('1st', textAlign: TextAlign.center),
-                      ), //No es necesario el
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Second Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.add_a_photo,
-                        ),
-                      ),
-                      Container(
-                        child: Text('2nd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Third Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ad_units,
-                        ),
-                      ),
-                      Container(
-                        child: Text('3rd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('First Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ads_click,
-                        ),
-                      ),
-                      Container(
-                        child: Text('1st', textAlign: TextAlign.center),
-                      ), //No es necesario el
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Second Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.add_a_photo,
-                        ),
-                      ),
-                      Container(
-                        child: Text('2nd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                  Expanded(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        iconSize: 50,
-                        color: Colors.blue,
-                        onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text('Third Icon was pressed')));
-                        },
-                        icon: Icon(
-                          Icons.ad_units,
-                        ),
-                      ),
-                      Container(
-                        child: Text('3rd', textAlign: TextAlign.center),
-                      ),
-                    ],
-                  )),
-                ],
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 1',
+                style: TextStyle(fontFamily: 'Pacifico'),
               ),
             ],
           ),
         ),
-      ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 2',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 3',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 4',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 5',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 6',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 7',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 8',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Column(
+            children: [
+              Image.network('https://picsum.photos/200'),
+              Text(
+                'Image 9',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
