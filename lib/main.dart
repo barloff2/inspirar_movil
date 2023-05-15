@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/12/2500/1667'),
               Text(
                 'Image 1',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/29/4000/2670'),
               Text(
                 'Image 2',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/2/5000/3333'),
               Text(
                 'Image 3',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/1/5000/3333'),
               Text(
                 'Image 4',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/26/4209/2769'),
               Text(
                 'Image 5',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -101,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/10/2500/1667'),
               Text(
                 'Image 6',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -112,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/14/2500/1667'),
               Text(
                 'Image 7',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -123,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/4/5000/3333'),
               Text(
                 'Image 8',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -134,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/200'),
+              Image.network('https://picsum.photos/id/12/2500/1667'),
               Text(
                 'Image 9',
                 style: TextStyle(fontFamily: 'Pacifico'),
