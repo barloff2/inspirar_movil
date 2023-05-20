@@ -10,9 +10,12 @@ class FormExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'WixMadeforDisplay'),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Form Sample')),
-        body: const FormExample(),
+        appBar: AppBar(title: const Text('Inspirar')),
+        body: Center(
+          child: SingleChildScrollView(child: const FormExample()),
+        ),
       ),
     );
   }
@@ -35,8 +38,27 @@ class _FormExampleState extends State<FormExample> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          Container(
+            child: Container(
+              height: 50.0,
+              color: Color.fromARGB(255, 68, 139, 172),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Datos de Usuario',
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
+              ),
+            ),
+          ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: Text('Nombre'),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: TextFormField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -52,6 +74,10 @@ class _FormExampleState extends State<FormExample> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: Text('Apellido'),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: TextFormField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -67,6 +93,10 @@ class _FormExampleState extends State<FormExample> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: Text('Número de Teléfono'),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: TextFormField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -82,6 +112,10 @@ class _FormExampleState extends State<FormExample> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: Text('Correo Electrónico'),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: TextFormField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
