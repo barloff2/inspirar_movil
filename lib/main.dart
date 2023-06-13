@@ -31,6 +31,14 @@ class FormExample extends StatefulWidget {
 class _FormExampleState extends State<FormExample> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
+  void _onTap() {
+    print('soy mario');
+  }
+
+  void _onLongPress() {
+    print('Se ha mantenido el click');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -53,6 +61,10 @@ class _FormExampleState extends State<FormExample> {
               ),
             ),
           ),
+          GestureDetector(
+              onTap: _onTap,
+              onLongPress: _onLongPress,
+              child: Image.asset('images/mario.jpg')),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: Text('Nombre'),
