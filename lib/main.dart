@@ -4,6 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
+//Stateless
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Pacifico'),
-      home: const MyHomePage(title: 'Inspirar'),
+      home: const MyHomePage(title: 'Parcial 3'),
     );
   }
 }
@@ -36,6 +36,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _onTap() {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Presionado')));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,11 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: GridView.count(mainAxisSpacing: 20.0, crossAxisCount: 3, children: [
+      body: GridView.count(mainAxisSpacing: 20.0, crossAxisCount: 2, children: [
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/id/12/2500/1667'),
+              GestureDetector(
+                onTap: _onTap,
+                child: Image.network('https://picsum.photos/id/12/2500/1667'),
+              ),
               Text(
                 'Image 1',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -56,20 +64,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/29/4000/2670'),
-              Text(
-                'Image 2',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
+          child: Column(children: <Widget>[
+            GestureDetector(
+              onTap: _onTap,
+              child: Image.network('https://picsum.photos/id/29/4000/2670'),
+            ),
+            Text(
+              'Image 2',
+              style: TextStyle(fontFamily: 'Pacifico'),
+            ),
+          ]),
         ),
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/id/2/5000/3333'),
+              GestureDetector(
+                onTap: _onTap,
+                child: Image.network('https://picsum.photos/id/2/5000/3333'),
+              ),
               Text(
                 'Image 3',
                 style: TextStyle(fontFamily: 'Pacifico'),
@@ -80,64 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           child: Column(
             children: [
-              Image.network('https://picsum.photos/id/1/5000/3333'),
+              GestureDetector(
+                onTap: _onTap,
+                child: Image.network('https://picsum.photos/id/1/5000/3333'),
+              ),
               Text(
                 'Image 4',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/26/4209/2769'),
-              Text(
-                'Image 5',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/10/2500/1667'),
-              Text(
-                'Image 6',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/14/2500/1667'),
-              Text(
-                'Image 7',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/4/5000/3333'),
-              Text(
-                'Image 8',
-                style: TextStyle(fontFamily: 'Pacifico'),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: Column(
-            children: [
-              Image.network('https://picsum.photos/id/12/2500/1667'),
-              Text(
-                'Image 9',
                 style: TextStyle(fontFamily: 'Pacifico'),
               ),
             ],
